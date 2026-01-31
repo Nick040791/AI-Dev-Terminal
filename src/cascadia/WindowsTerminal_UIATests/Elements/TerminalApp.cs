@@ -6,24 +6,19 @@
 //----------------------------------------------------------------------------------------------------------------------
 namespace WindowsTerminal.UIA.Tests.Elements
 {
-    using System;
-    using System.IO;
-
-    using WindowsTerminal.UIA.Tests.Common;
-    using WindowsTerminal.UIA.Tests.Common.NativeMethods;
-
-    using OpenQA.Selenium.Remote;
     using OpenQA.Selenium.Appium;
     using OpenQA.Selenium.Appium.iOS;
     using OpenQA.Selenium.Interactions;
-
+    using OpenQA.Selenium.Remote;
+    using System;
+    using System.IO;
+    using System.Runtime.InteropServices;
+    using System.Security.Principal;
     using WEX.Logging.Interop;
     using WEX.TestExecution;
     using WEX.TestExecution.Markup;
-
-    using System.Runtime.InteropServices;
-    using System.Security.Principal;
-    using OpenQA.Selenium;
+    using WindowsTerminal.UIA.Tests.Common;
+    using WindowsTerminal.UIA.Tests.Common.NativeMethods;
 
     public class TerminalApp : IDisposable
     {

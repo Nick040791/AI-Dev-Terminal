@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(findstr:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(pwsh -NoProfile -Command 'cmd /c \"\"tools\\\\razzle.cmd\"\" \"\"&\"\" \"\"msbuild src\\\\cascadia\\\\TerminalControl\\\\dll\\\\TerminalControl.vcxproj /p:Configuration=Debug /p:Platform=x64 /t:Build\"\"')",
+      "Bash(where:*)",
+      "Bash(pwsh:*)",
+      "Bash(cmd //c \"tools\\\\razzle.cmd && msbuild src\\\\cascadia\\\\TerminalControl\\\\lib\\\\TerminalControl.vcxproj /p:Configuration=Debug /p:Platform=x64 /t:Build /v:m\")",
+      "Bash(cmd //c \"tools\\\\razzle.cmd && msbuild src\\\\cascadia\\\\TerminalControl\\\\TerminalControlLib.vcxproj /p:Configuration=Debug /p:Platform=x64 /t:Build /v:m\")",
+      "Bash(\"C:\\\\Program Files \\(x86\\)\\\\Microsoft Visual Studio\\\\2022\\\\BuildTools\\\\MSBuild\\\\Current\\\\Bin\\\\amd64\\\\MSBuild.exe\" -version)",
+      "Bash(\"C:\\\\Program Files \\(x86\\)\\\\Microsoft Visual Studio\\\\2022\\\\BuildTools\\\\MSBuild\\\\Current\\\\Bin\\\\amd64\\\\MSBuild.exe\" OpenConsole.slnx /p:Configuration=Debug /p:Platform=x64 /t:Build /v:m /m)",
+      "Bash(cmd //c '\"\"C:\\\\Program Files \\(x86\\)\\\\Microsoft Visual Studio\\\\2022\\\\BuildTools\\\\MSBuild\\\\Current\\\\Bin\\\\amd64\\\\MSBuild.exe\"\" OpenConsole.slnx /p:Configuration=Debug /p:Platform=x64 /t:Build /v:m /m')"
+    ]
+  }
+}

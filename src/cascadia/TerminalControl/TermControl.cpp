@@ -1490,6 +1490,40 @@ namespace winrt::Microsoft::Terminal::Control::implementation
         }
 
         const auto ch = e.Character();
+
+        // ============================================
+        // SLASH COMMAND MENU CHARACTER INTERCEPTION
+        // ============================================
+
+        // If menu is open, route characters to the menu buffer
+        if (_isSlashMenuOpen)
+        {
+            // Only accept printable characters (not control chars)
+            if (ch >= L' ' && ch != 0x7F)
+            {
+                _slashMenuBuffer += ch;
+                SlashMenuBufferChanged.raise(*this, winrt::hstring{ _slashMenuBuffer });
+            }
+            e.Handled(true);
+            return; // Consume - DO NOT send to shell
+        }
+
+        // Intercept '/' to trigger menu (backup if KeyHandler didn't catch it)
+        if (ch == L'/')
+        {
+            const auto modifiers = _GetPressedModifierKeys();
+            if (!modifiers.IsCtrlPressed() && !modifiers.IsAltPressed())
+            {
+                _OpenSlashMenu();
+                e.Handled(true);
+                return; // DO NOT send '/' to the shell
+            }
+        }
+
+        // ============================================
+        // END SLASH COMMAND CHARACTER INTERCEPTION
+        // ============================================
+
         const auto keyStatus = e.KeyStatus();
         const auto scanCode = gsl::narrow_cast<WORD>(keyStatus.ScanCode);
         auto modifiers = _GetPressedModifierKeys();
@@ -1570,6 +1604,70 @@ namespace winrt::Microsoft::Terminal::Control::implementation
         {
             return false;
         }
+
+        // ============================================
+        // SLASH COMMAND MENU INTERCEPTION
+        // ============================================
+
+        // If slash menu is open, intercept ALL keystrokes
+        if (_isSlashMenuOpen)
+        {
+            if (keyDown)
+            {
+                // Escape: Close menu without executing
+                if (vkey == VK_ESCAPE)
+                {
+                    _CloseSlashMenu(false);
+                    return true;
+                }
+
+                // Enter: Execute the command and close
+                if (vkey == VK_RETURN)
+                {
+                    _CloseSlashMenu(true);
+                    return true;
+                }
+
+                // Backspace: Remove last character from buffer
+                if (vkey == VK_BACK)
+                {
+                    if (_slashMenuBuffer.length() > 1)
+                    {
+                        _slashMenuBuffer.pop_back();
+                        SlashMenuBufferChanged.raise(*this, winrt::hstring{ _slashMenuBuffer });
+                    }
+                    else
+                    {
+                        // Buffer only has '/', close menu
+                        _CloseSlashMenu(false);
+                    }
+                    return true;
+                }
+
+                // Arrow keys for menu navigation
+                if (vkey == VK_UP || vkey == VK_DOWN || vkey == VK_TAB)
+                {
+                    _HandleSlashMenuInput(vkey, L'\0', keyDown);
+                    return true;
+                }
+            }
+
+            // Consume ALL key events while menu is open
+            // Actual characters are handled in _CharacterHandler
+            return true;
+        }
+
+        // Check for '/' key press to OPEN the menu (VK_OEM_2 is '/' on US keyboards)
+        if (vkey == VK_OEM_2 && keyDown &&
+            !modifiers.IsCtrlPressed() && !modifiers.IsAltPressed() && !modifiers.IsShiftPressed())
+        {
+            _OpenSlashMenu();
+            return true; // Consume the '/' keystroke - DO NOT send to shell
+        }
+
+        // ============================================
+        // END SLASH COMMAND MENU INTERCEPTION
+        // ============================================
 
         // GH#11076:
         // For some weird reason we sometimes receive a WM_KEYDOWN
@@ -4129,5 +4227,45 @@ namespace winrt::Microsoft::Terminal::Control::implementation
         {
             _core.ForceCursorVisible(cursorVisibility == CursorDisplayState::Shown);
         }
+    }
+
+    // ============================================
+    // SLASH COMMAND MENU IMPLEMENTATION
+    // ============================================
+
+    void TermControl::_OpenSlashMenu()
+    {
+        _isSlashMenuOpen = true;
+        _slashMenuBuffer.clear();
+        _slashMenuBuffer = L"/"; // Start with the trigger character for display
+
+        // Raise event to notify UI layer
+        SlashMenuOpened.raise(*this, nullptr);
+        SlashMenuBufferChanged.raise(*this, winrt::hstring{ _slashMenuBuffer });
+    }
+
+    void TermControl::_CloseSlashMenu(bool executeCommand)
+    {
+        _isSlashMenuOpen = false;
+
+        if (executeCommand && _slashMenuBuffer.length() > 1)
+        {
+            // Extract command (remove leading '/')
+            auto command = _slashMenuBuffer.substr(1);
+
+            // Raise event with the command for external handling
+            SlashCommandInvoked.raise(*this, winrt::hstring{ command });
+        }
+
+        _slashMenuBuffer.clear();
+        SlashMenuClosed.raise(*this, nullptr);
+    }
+
+    bool TermControl::_HandleSlashMenuInput(WORD vkey, wchar_t /*character*/, bool /*keyDown*/)
+    {
+        // Handle navigation keys for menu selection
+        // This can be extended to emit navigation events for your XAML UI
+        // For now, just return true to indicate the key was handled
+        return true;
     }
 }

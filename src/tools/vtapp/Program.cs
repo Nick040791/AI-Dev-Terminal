@@ -2,12 +2,9 @@
 // Licensed under the MIT license.
 
 using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace VTApp
 {
@@ -299,7 +296,7 @@ namespace VTApp
                             int mode;
                             if (Pinvoke.GetConsoleMode(hCon, out mode))
                             {
-                                mode ^=  Pinvoke.ENABLE_VIRTUAL_TERMINAL_INPUT;
+                                mode ^= Pinvoke.ENABLE_VIRTUAL_TERMINAL_INPUT;
                                 mode &= ~Pinvoke.ENABLE_PROCESSED_INPUT;
                                 Pinvoke.SetConsoleMode(hCon, mode);
                             }

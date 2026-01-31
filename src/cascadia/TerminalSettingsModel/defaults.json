@@ -40,19 +40,21 @@
             "name": "Windows PowerShell",
             "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
             "icon": "ms-appx:///ProfileIcons/{61c54bbd-c2c6-5271-96e7-009a87ff44bf}.png",
-            "colorScheme": "Campbell",
+            "colorScheme": "Arcade Neon",
             "antialiasingMode": "grayscale",
             "closeOnExit": "automatic",
-            "cursorShape": "bar",
-            "fontFace": "Cascadia Mono",
-            "fontSize": 12,
+            "cursorShape": "vintage",
+            "fontFace": "Consolas",
+            "fontSize": 14,
+            "fontWeight": "bold",
             "hidden": false,
             "historySize": 9001,
             "padding": "8, 8, 8, 8",
             "snapOnInput": true,
             "altGrAliasing": true,
             "startingDirectory": "%USERPROFILE%",
-            "useAcrylic": false
+            "useAcrylic": false,
+            "intenseTextStyle": "bright"
         },
         {
             "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
@@ -80,6 +82,29 @@
         //   - "foreground"
         //   - "background"
         //   - "cursorColor"
+        {
+            "name": "Arcade Neon",
+            "background": "#000000",
+            "foreground": "#00FF00",
+            "cursorColor": "#39FF14",
+            "selectionBackground": "#00AA00",
+            "black": "#001100",
+            "red": "#FF0066",
+            "green": "#00FF00",
+            "yellow": "#FFFF00",
+            "blue": "#00FFFF",
+            "purple": "#FF00FF",
+            "cyan": "#00FFFF",
+            "white": "#00DD00",
+            "brightBlack": "#005500",
+            "brightRed": "#FF3399",
+            "brightGreen": "#39FF14",
+            "brightYellow": "#FFFF99",
+            "brightBlue": "#66FFFF",
+            "brightPurple": "#FF66FF",
+            "brightCyan": "#66FFFF",
+            "brightWhite": "#00FF00"
+        },
         {
             "name": "Dimidium",
             "background": "#141414",

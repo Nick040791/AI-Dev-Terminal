@@ -177,22 +177,22 @@
                                 the properly themed versions. Presumably because the
                                 App itself can't have its RequestedTheme changed at
                                 runtime.
-                                
+
                                 However, after more discussion with the WinUI
                                 team, we determined that those colors don't
                                 provide enough contrast. The color here (and in
                                 light mode) were chosen for greater contrast.
-                                
+
                                 See GH #12356 for more history on the subject.
                             -->
                             <SolidColorBrush x:Key="TabViewBackground"
-                                             Color="#2e2e2e" />
+                                             Color="#000000" />
 
                             <StaticResource x:Key="UnfocusedBorderBrush"
                                             ResourceKey="TabViewBackground" />
 
                             <SolidColorBrush x:Key="SettingsUiTabBrush"
-                                             Color="#0c0c0c" />
+                                             Color="#000000" />
 
                             <SolidColorBrush x:Key="BroadcastPaneBorderColor"
                                              Color="{StaticResource SystemAccentColorDark2}" />
@@ -227,7 +227,7 @@
                                 provide a Light&dark version of a resource, but not the
                                 HighContrast version, the resource loader will fall back to the
                                 Light value.
-                                
+
                                 SystemColorButtonFaceColorBrush is the default background color for WinUI's TabViewBackground under high contrast mode.
                             -->
                             <StaticResource x:Key="TabViewBackground"

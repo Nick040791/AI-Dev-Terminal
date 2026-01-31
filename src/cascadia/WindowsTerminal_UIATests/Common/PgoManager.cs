@@ -1,8 +1,3 @@
-using System;
-using System.Diagnostics;
-using System.IO;
-using System.Text;
-using WEX.Logging.Interop;
 using WEX.TestExecution.Markup;
 
 namespace WindowsTerminal.UIA.Tests.Common

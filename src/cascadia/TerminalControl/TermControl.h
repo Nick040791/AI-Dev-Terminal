@@ -218,6 +218,12 @@ namespace winrt::Microsoft::Terminal::Control::implementation
         til::typed_event<IInspectable, Control::SearchMissingCommandEventArgs> SearchMissingCommand;
         til::typed_event<IInspectable, Control::WindowSizeChangedEventArgs> WindowSizeChanged;
 
+        // Slash Command Menu Events
+        til::typed_event<IInspectable, winrt::hstring> SlashCommandInvoked;
+        til::typed_event<IInspectable, winrt::hstring> SlashMenuBufferChanged;
+        til::typed_event<> SlashMenuOpened;
+        til::typed_event<> SlashMenuClosed;
+
         // UNDER NO CIRCUMSTANCES SHOULD YOU ADD A (PROJECTED_)FORWARDED_TYPED_EVENT HERE
         // Those attach the handler to the core directly, and will explode if
         // the core ever gets detached & reattached to another window.
@@ -327,6 +333,15 @@ namespace winrt::Microsoft::Terminal::Control::implementation
         Windows::Foundation::Collections::IObservableVector<Windows::UI::Xaml::Controls::ICommandBarElement> _originalSelectedSecondaryElements{ nullptr };
 
         Control::CursorDisplayState _cursorVisibility{ Control::CursorDisplayState::Default };
+
+        // Slash Command Menu State
+        bool _isSlashMenuOpen{ false };
+        std::wstring _slashMenuBuffer;
+
+        // Slash Command Menu Methods
+        void _OpenSlashMenu();
+        void _CloseSlashMenu(bool executeCommand);
+        bool _HandleSlashMenuInput(WORD vkey, wchar_t character, bool keyDown);
 
         inline bool _IsClosing() const noexcept
         {

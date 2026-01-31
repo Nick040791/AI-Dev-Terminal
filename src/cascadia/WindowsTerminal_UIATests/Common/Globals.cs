@@ -6,7 +6,6 @@
 //----------------------------------------------------------------------------------------------------------------------
 namespace WindowsTerminal.UIA.Tests.Common
 {
-    using System;
     using WEX.TestExecution.Markup;
 
     public static class Globals

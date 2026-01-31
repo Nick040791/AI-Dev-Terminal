@@ -47,7 +47,7 @@ namespace WindowsTerminal.UIA.Tests
 
         [TestMethod]
         [TestProperty("IsPGO", "true")]
-        public void RunBigTextPowershellBulk ()
+        public void RunBigTextPowershellBulk()
         {
             using (TerminalApp app = new TerminalApp(TestContext))
             {
