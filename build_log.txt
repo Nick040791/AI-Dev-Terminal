@@ -1,0 +1,130 @@
+Setting up dev environment...
+Invalid input 'OpenConsole.slnx'. The file type was not recognized.
+The dev environment is ready to go!
+MSBuild version 18.0.5+e22287bf1 for .NET Framework
+Build started 1/31/2026 12:04:28 PM.
+
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" on node 1 (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\build\rules\GenerateFeatureFlags.proj" (2) on node 1 (default targets).
+_GenerateBranchAndBrandingCache:
+  git.exe rev-parse --abbrev-ref HEAD
+  main
+_RunFeatureFlagScript:
+Skipping target "_RunFeatureFlagScript" because all output files are up-to-date with respect to the input files.
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\build\rules\GenerateFeatureFlags.proj" (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\buffer\out\lib\bufferout.vcxproj" (3) on node 1 (default targets).
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\buffer\out\lib\bufferout.vcxproj]
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\buffer\out\lib\bufferout.vcxproj" (default targets) -- FAILED.
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\interactivity\base\lib\InteractivityBase.vcxproj" (4) on node 1 (default targets).
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\interactivity\base\lib\InteractivityBase.vcxproj]
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\interactivity\base\lib\InteractivityBase.vcxproj" (default targets) -- FAILED.
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\interactivity\win32\lib\win32.LIB.vcxproj" (5) on node 1 (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\interactivity\win32\lib\win32.LIB.vcxproj" (5) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\atlas\atlas.vcxproj" (6) on node 1 (default targets).
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\atlas\atlas.vcxproj]
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\atlas\atlas.vcxproj" (default targets) -- FAILED.
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\interactivity\win32\lib\win32.LIB.vcxproj" (default targets) -- FAILED.
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\internal\internal.vcxproj" (7) on node 1 (default targets).
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\internal\internal.vcxproj]
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\internal\internal.vcxproj" (default targets) -- FAILED.
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\propslib\propslib.vcxproj" (8) on node 1 (default targets).
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\propslib\propslib.vcxproj]
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\propslib\propslib.vcxproj" (default targets) -- FAILED.
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\base\lib\base.vcxproj" (9) on node 1 (default targets).
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\base\lib\base.vcxproj]
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\base\lib\base.vcxproj" (default targets) -- FAILED.
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\gdi\lib\gdi.vcxproj" (10) on node 1 (default targets).
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\gdi\lib\gdi.vcxproj]
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\gdi\lib\gdi.vcxproj" (default targets) -- FAILED.
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\server\lib\server.vcxproj" (11) on node 1 (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\server\lib\server.vcxproj" (11) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\proxy\Host.Proxy.vcxproj" (12) on node 1 (default targets).
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\proxy\Host.Proxy.vcxproj]
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\proxy\Host.Proxy.vcxproj" (default targets) -- FAILED.
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\server\lib\server.vcxproj" (default targets) -- FAILED.
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\terminal\adapter\lib\adapter.vcxproj" (13) on node 1 (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\terminal\adapter\lib\adapter.vcxproj" (13) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\types\lib\types.vcxproj" (14) on node 1 (default targets).
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\types\lib\types.vcxproj]
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\types\lib\types.vcxproj" (default targets) -- FAILED.
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\terminal\adapter\lib\adapter.vcxproj" (default targets) -- FAILED.
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\terminal\parser\lib\parser.vcxproj" (16) on node 1 (default targets).
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\terminal\parser\lib\parser.vcxproj]
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\terminal\parser\lib\parser.vcxproj" (default targets) -- FAILED.
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\tsf\tsf.vcxproj" (17) on node 1 (default targets).
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\tsf\tsf.vcxproj]
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\tsf\tsf.vcxproj" (default targets) -- FAILED.
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\lib\hostlib.vcxproj" (18) on node 1 (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\lib\hostlib.vcxproj" (18) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\audio\midi\lib\midi.vcxproj" (19) on node 1 (default targets).
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\audio\midi\lib\midi.vcxproj]
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\audio\midi\lib\midi.vcxproj" (default targets) -- FAILED.
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\lib\hostlib.vcxproj" (default targets) -- FAILED.
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (default targets) -- FAILED.
+
+Build FAILED.
+
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (default target) (1) ->
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\buffer\out\lib\bufferout.vcxproj" (default target) (3) ->
+(_CheckWindowsSDKInstalled target) -> 
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\buffer\out\lib\bufferout.vcxproj]
+
+
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (default target) (1) ->
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\interactivity\base\lib\InteractivityBase.vcxproj" (default target) (4) ->
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\interactivity\base\lib\InteractivityBase.vcxproj]
+
+
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (default target) (1) ->
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\interactivity\win32\lib\win32.LIB.vcxproj" (default target) (5) ->
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\atlas\atlas.vcxproj" (default target) (6) ->
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\atlas\atlas.vcxproj]
+
+
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (default target) (1) ->
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\internal\internal.vcxproj" (default target) (7) ->
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\internal\internal.vcxproj]
+
+
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (default target) (1) ->
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\propslib\propslib.vcxproj" (default target) (8) ->
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\propslib\propslib.vcxproj]
+
+
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (default target) (1) ->
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\base\lib\base.vcxproj" (default target) (9) ->
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\base\lib\base.vcxproj]
+
+
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (default target) (1) ->
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\gdi\lib\gdi.vcxproj" (default target) (10) ->
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\gdi\lib\gdi.vcxproj]
+
+
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (default target) (1) ->
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\server\lib\server.vcxproj" (default target) (11) ->
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\proxy\Host.Proxy.vcxproj" (default target) (12) ->
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\proxy\Host.Proxy.vcxproj]
+
+
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (default target) (1) ->
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\terminal\adapter\lib\adapter.vcxproj" (default target) (13) ->
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\types\lib\types.vcxproj" (default target) (14) ->
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\types\lib\types.vcxproj]
+
+
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (default target) (1) ->
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\terminal\parser\lib\parser.vcxproj" (default target) (16) ->
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\terminal\parser\lib\parser.vcxproj]
+
+
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (default target) (1) ->
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\tsf\tsf.vcxproj" (default target) (17) ->
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\tsf\tsf.vcxproj]
+
+
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (default target) (1) ->
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\lib\hostlib.vcxproj" (default target) (18) ->
+"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\audio\midi\lib\midi.vcxproj" (default target) (19) ->
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\Msbuild\Microsoft\VC\v170\Microsoft.Cpp.WindowsSDK.targets(46,5): error MSB8036: The Windows SDK version 10.0.22621.0 was not found. Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution". [C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\audio\midi\lib\midi.vcxproj]
+
+    0 Warning(s)
+    12 Error(s)
+
+Time Elapsed 00:00:00.33

@@ -43,6 +43,12 @@ for /f "usebackq delims=" %%I in (`dir /b /aD /o-N /s "%~dp0..\packages\vswhere*
 )
 
 if not defined VSWHERE (
+    if exist "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe" (
+        set VSWHERE="C:\Program Files (x86)\Microsoft Visual Studio\Installer\vswhere.exe"
+    )
+)
+
+if not defined VSWHERE (
     echo Could not find vswhere on your machine. Please set the VSWHERE variable to the location of vswhere.exe and run razzle again.
     goto :EXIT
 )

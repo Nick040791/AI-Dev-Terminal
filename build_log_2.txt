@@ -1,0 +1,807 @@
+Setting up dev environment...
+Invalid input 'OpenConsole.slnx'. The file type was not recognized.
+The dev environment is ready to go!
+MSBuild version 18.0.5+e22287bf1 for .NET Framework
+Build started 1/31/2026 12:05:11 PM.
+
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" on node 1 (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\build\rules\GenerateFeatureFlags.proj" (2) on node 1 (default targets).
+_GenerateBranchAndBrandingCache:
+  git.exe rev-parse --abbrev-ref HEAD
+  main
+_RunFeatureFlagScript:
+Skipping target "_RunFeatureFlagScript" because all output files are up-to-date with respect to the input files.
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\build\rules\GenerateFeatureFlags.proj" (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\buffer\out\lib\bufferout.vcxproj" (3) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\BufferOut.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\BufferOut.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\"
+  Using normalized configuration "Debug"
+VcpkgInstallManifestDependencies:
+Skipping target "VcpkgInstallManifestDependencies" because all output files are up-to-date with respect to the input files.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yc"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\ConBufferOut.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConBufferOut.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\precomp.cpp
+  precomp.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yu"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\ConBufferOut.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConBufferOut.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\cursor.cpp ..\ImageSlice.cpp ..\OutputCell.cpp ..\OutputCellIterator.cpp ..\OutputCellRect.cpp ..\OutputCellView.cpp ..\Row.cpp ..\search.cpp ..\TextColor.cpp ..\TextAttribute.cpp ..\textBuffer.cpp ..\textBufferCellIterator.cpp ..\textBufferTextIterator.cpp ..\UTextAdapter.cpp
+  cursor.cpp
+  ImageSlice.cpp
+  OutputCell.cpp
+  OutputCellIterator.cpp
+  OutputCellRect.cpp
+  OutputCellView.cpp
+  Row.cpp
+  search.cpp
+  TextColor.cpp
+  TextAttribute.cpp
+  textBuffer.cpp
+  textBufferCellIterator.cpp
+  textBufferTextIterator.cpp
+  UTextAdapter.cpp
+Lib:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConBufferOut.lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib\manual-link" /NOLOGO /MACHINE:X64 "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\cursor.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\ImageSlice.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\OutputCell.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\OutputCellIterator.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\OutputCellRect.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\OutputCellView.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\Row.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\search.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\TextColor.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\TextAttribute.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\textBuffer.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\textBufferCellIterator.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\textBufferTextIterator.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\precomp.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\UTextAdapter.obj"
+  bufferout.vcxproj -> C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConBufferOut.lib
+FinalizeBuildStatus:
+  Deleting file "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\BufferOut.tlog\unsuccessfulbuild".
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\BufferOut\BufferOut.tlog\BufferOut.lastbuildstate".
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\buffer\out\lib\bufferout.vcxproj" (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\interactivity\base\lib\InteractivityBase.vcxproj" (4) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityBase\Interact.06EC74CB.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityBase\Interact.06EC74CB.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\"
+  Using normalized configuration "Debug"
+VcpkgInstallManifestDependencies:
+Skipping target "VcpkgInstallManifestDependencies" because all output files are up-to-date with respect to the input files.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yc"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityBase\ConInteractivityBaseLib.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityBase\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConInteractivityBaseLib.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\precomp.cpp
+  precomp.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yu"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityBase\ConInteractivityBaseLib.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityBase\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConInteractivityBaseLib.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\ApiDetector.cpp ..\EventSynthesis.cpp ..\HostSignalInputThread.cpp ..\InteractivityFactory.cpp ..\PseudoConsoleWindowAccessibilityProvider.cpp ..\RemoteConsoleControl.cpp ..\ServiceLocator.cpp ..\VtApiRedirection.cpp
+  ApiDetector.cpp
+  EventSynthesis.cpp
+  HostSignalInputThread.cpp
+  InteractivityFactory.cpp
+  PseudoConsoleWindowAccessibilityProvider.cpp
+  RemoteConsoleControl.cpp
+  ServiceLocator.cpp
+  VtApiRedirection.cpp
+Lib:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConInteractivityBaseLib.lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib\manual-link" /NOLOGO /MACHINE:X64 "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityBase\ApiDetector.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityBase\EventSynthesis.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityBase\HostSignalInputThread.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityBase\InteractivityFactory.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityBase\precomp.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityBase\PseudoConsoleWindowAccessibilityProvider.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityBase\RemoteConsoleControl.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityBase\ServiceLocator.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityBase\VtApiRedirection.obj"
+  InteractivityBase.vcxproj -> C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConInteractivityBaseLib.lib
+FinalizeBuildStatus:
+  Deleting file "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityBase\Interact.06EC74CB.tlog\unsuccessfulbuild".
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityBase\Interact.06EC74CB.tlog\InteractivityBase.lastbuildstate".
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\interactivity\base\lib\InteractivityBase.vcxproj" (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\interactivity\win32\lib\win32.LIB.vcxproj" (5) on node 1 (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\interactivity\win32\lib\win32.LIB.vcxproj" (5) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\atlas\atlas.vcxproj" (6) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererAtlas\RendererAtlas.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererAtlas\RendererAtlas.tlog\unsuccessfulbuild".
+FxCompile:
+  C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64\fxc.exe /nologo /E"main" /WX /T ps_4_0 /all_resources_bound /Fh "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\RendererAtlas\custom_shader_ps.h" /Vn "custom_shader_ps" /Od /Zi custom_shader_ps.hlsl 
+  compilation header save succeeded; see C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\RendererAtlas\custom_shader_ps.h
+  C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64\fxc.exe /nologo /E"main" /WX /T vs_4_0 /all_resources_bound /Fh "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\RendererAtlas\custom_shader_vs.h" /Vn "custom_shader_vs" /Od /Zi custom_shader_vs.hlsl 
+  compilation header save succeeded; see C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\RendererAtlas\custom_shader_vs.h
+  C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64\fxc.exe /nologo /E"main" /WX /T ps_4_0 /all_resources_bound /Fh "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\RendererAtlas\shader_ps.h" /Vn "shader_ps" /Od /Zi shader_ps.hlsl 
+  compilation header save succeeded; see C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\RendererAtlas\shader_ps.h
+  C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64\fxc.exe /nologo /E"main" /WX /T vs_4_0 /all_resources_bound /Fh "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\RendererAtlas\shader_vs.h" /Vn "shader_vs" /Od /Zi shader_vs.hlsl 
+  compilation header save succeeded; see C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\RendererAtlas\shader_vs.h
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\"
+  Using normalized configuration "Debug"
+VcpkgInstallManifestDependencies:
+Skipping target "VcpkgInstallManifestDependencies" because all output files are up-to-date with respect to the input files.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\stb" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\RendererAtlas" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yc"pch.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererAtlas\ConRenderAtlas.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererAtlas\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConRenderAtlas.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret pch.cpp
+  pch.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\stb" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\RendererAtlas" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yu"pch.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererAtlas\ConRenderAtlas.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererAtlas\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConRenderAtlas.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret AtlasEngine.cpp AtlasEngine.api.cpp AtlasEngine.r.cpp Backend.cpp BackendD2D.cpp BackendD3D.cpp BuiltinGlyphs.cpp dwrite.cpp DWriteTextAnalysis.cpp stb_rect_pack.cpp wic.cpp
+  AtlasEngine.cpp
+  AtlasEngine.api.cpp
+  AtlasEngine.r.cpp
+  Backend.cpp
+  BackendD2D.cpp
+  BackendD3D.cpp
+  BuiltinGlyphs.cpp
+  dwrite.cpp
+  DWriteTextAnalysis.cpp
+  stb_rect_pack.cpp
+  wic.cpp
+Lib:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConRenderAtlas.lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib\manual-link" /NOLOGO /MACHINE:X64 "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererAtlas\AtlasEngine.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererAtlas\AtlasEngine.api.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererAtlas\AtlasEngine.r.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererAtlas\Backend.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererAtlas\BackendD2D.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererAtlas\BackendD3D.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererAtlas\BuiltinGlyphs.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererAtlas\dwrite.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererAtlas\DWriteTextAnalysis.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererAtlas\pch.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererAtlas\stb_rect_pack.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererAtlas\wic.obj"
+  atlas.vcxproj -> C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConRenderAtlas.lib
+FinalizeBuildStatus:
+  Deleting file "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererAtlas\RendererAtlas.tlog\unsuccessfulbuild".
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererAtlas\RendererAtlas.tlog\RendererAtlas.lastbuildstate".
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\atlas\atlas.vcxproj" (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\Interact.06EC74CB.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\Interact.06EC74CB.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\"
+  Using normalized configuration "Debug"
+VcpkgInstallManifestDependencies:
+Skipping target "VcpkgInstallManifestDependencies" because all output files are up-to-date with respect to the input files.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I..\..\..\inc /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D _WINDLL /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yc"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\ConInteractivityWin32Lib.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConInteractivityWin32Lib.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\precomp.cpp
+  precomp.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I..\..\..\inc /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D _WINDLL /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yu"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\ConInteractivityWin32Lib.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConInteractivityWin32Lib.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\Clipboard.cpp ..\ConsoleControl.cpp ..\ConsoleInputThread.cpp ..\ConsoleKeyInfo.cpp ..\Find.cpp ..\Icon.cpp ..\Menu.cpp ..\screenInfoUiaProvider.cpp ..\SystemConfigurationProvider.cpp ..\uiaTextRange.cpp ..\Window.cpp ..\WindowDpiApi.cpp ..\WindowIo.cpp ..\WindowMetrics.cpp ..\WindowProc.cpp ..\windowUiaProvider.cpp
+  Clipboard.cpp
+  ConsoleControl.cpp
+  ConsoleInputThread.cpp
+  ConsoleKeyInfo.cpp
+  Find.cpp
+  Icon.cpp
+  Menu.cpp
+  screenInfoUiaProvider.cpp
+  SystemConfigurationProvider.cpp
+  uiaTextRange.cpp
+  Window.cpp
+  WindowDpiApi.cpp
+  WindowIo.cpp
+  WindowMetrics.cpp
+  WindowProc.cpp
+  windowUiaProvider.cpp
+Lib:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConInteractivityWin32Lib.lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib\manual-link" /NOLOGO /MACHINE:X64 "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\Clipboard.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\ConsoleControl.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\ConsoleInputThread.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\ConsoleKeyInfo.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\Find.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\Icon.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\Menu.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\precomp.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\screenInfoUiaProvider.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\SystemConfigurationProvider.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\uiaTextRange.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\Window.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\WindowDpiApi.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\WindowIo.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\WindowMetrics.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\WindowProc.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\windowUiaProvider.obj"
+  win32.LIB.vcxproj -> C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConInteractivityWin32Lib.lib
+FinalizeBuildStatus:
+  Deleting file "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\Interact.06EC74CB.tlog\unsuccessfulbuild".
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\InteractivityWin32\Interact.06EC74CB.tlog\InteractivityWin32.lastbuildstate".
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\interactivity\win32\lib\win32.LIB.vcxproj" (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\internal\internal.vcxproj" (7) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Internal\Internal.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Internal\Internal.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\"
+  Using normalized configuration "Debug"
+VcpkgInstallManifestDependencies:
+Skipping target "VcpkgInstallManifestDependencies" because all output files are up-to-date with respect to the input files.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yc"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Internal\ConInt.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Internal\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConInt.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret precomp.cpp
+  precomp.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yu"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Internal\ConInt.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Internal\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConInt.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret stubs.cpp
+  stubs.cpp
+Lib:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConInt.lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib\manual-link" /NOLOGO /MACHINE:X64 "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Internal\stubs.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Internal\precomp.obj"
+  internal.vcxproj -> C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConInt.lib
+FinalizeBuildStatus:
+  Deleting file "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Internal\Internal.tlog\unsuccessfulbuild".
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Internal\Internal.tlog\Internal.lastbuildstate".
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\internal\internal.vcxproj" (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\propslib\propslib.vcxproj" (8) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\PropertiesLibrary\Properti.345FD5A4.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\PropertiesLibrary\Properti.345FD5A4.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\"
+  Using normalized configuration "Debug"
+VcpkgInstallManifestDependencies:
+Skipping target "VcpkgInstallManifestDependencies" because all output files are up-to-date with respect to the input files.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yc"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\PropertiesLibrary\ConProps.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\PropertiesLibrary\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConProps.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret precomp.cpp
+  precomp.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yu"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\PropertiesLibrary\ConProps.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\PropertiesLibrary\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConProps.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret DelegationConfig.cpp RegistrySerialization.cpp ShortcutSerialization.cpp TrueTypeFontList.cpp
+  DelegationConfig.cpp
+  RegistrySerialization.cpp
+  ShortcutSerialization.cpp
+  TrueTypeFontList.cpp
+Lib:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConProps.lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib\manual-link" /NOLOGO /MACHINE:X64 "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\PropertiesLibrary\DelegationConfig.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\PropertiesLibrary\RegistrySerialization.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\PropertiesLibrary\ShortcutSerialization.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\PropertiesLibrary\TrueTypeFontList.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\PropertiesLibrary\precomp.obj"
+  propslib.vcxproj -> C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConProps.lib
+FinalizeBuildStatus:
+  Deleting file "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\PropertiesLibrary\Properti.345FD5A4.tlog\unsuccessfulbuild".
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\PropertiesLibrary\Properti.345FD5A4.tlog\PropertiesLibrary.lastbuildstate".
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\propslib\propslib.vcxproj" (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\base\lib\base.vcxproj" (9) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererBase\RendererBase.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererBase\RendererBase.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\"
+  Using normalized configuration "Debug"
+VcpkgInstallManifestDependencies:
+Skipping target "VcpkgInstallManifestDependencies" because all output files are up-to-date with respect to the input files.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yc"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererBase\ConRenderBase.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererBase\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConRenderBase.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\precomp.cpp
+  precomp.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yu"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererBase\ConRenderBase.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererBase\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConRenderBase.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\CSSLengthPercentage.cpp ..\FontInfo.cpp ..\FontInfoBase.cpp ..\FontInfoDesired.cpp ..\FontResource.cpp ..\RenderEngineBase.cpp ..\RenderSettings.cpp ..\renderer.cpp
+  CSSLengthPercentage.cpp
+  FontInfo.cpp
+  FontInfoBase.cpp
+  FontInfoDesired.cpp
+  FontResource.cpp
+  RenderEngineBase.cpp
+  RenderSettings.cpp
+  renderer.cpp
+Lib:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConRenderBase.lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib\manual-link" /NOLOGO /MACHINE:X64 "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererBase\CSSLengthPercentage.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererBase\FontInfo.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererBase\FontInfoBase.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererBase\FontInfoDesired.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererBase\FontResource.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererBase\RenderEngineBase.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererBase\RenderSettings.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererBase\renderer.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererBase\precomp.obj"
+  base.vcxproj -> C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConRenderBase.lib
+FinalizeBuildStatus:
+  Deleting file "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererBase\RendererBase.tlog\unsuccessfulbuild".
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererBase\RendererBase.tlog\RendererBase.lastbuildstate".
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\base\lib\base.vcxproj" (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\gdi\lib\gdi.vcxproj" (10) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererGdi\RendererGdi.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererGdi\RendererGdi.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\"
+  Using normalized configuration "Debug"
+VcpkgInstallManifestDependencies:
+Skipping target "VcpkgInstallManifestDependencies" because all output files are up-to-date with respect to the input files.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yc"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererGdi\ConRenderGdi.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererGdi\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConRenderGdi.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\precomp.cpp
+  precomp.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yu"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererGdi\ConRenderGdi.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererGdi\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConRenderGdi.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\invalidate.cpp ..\math.cpp ..\paint.cpp ..\state.cpp
+  invalidate.cpp
+  math.cpp
+  paint.cpp
+  state.cpp
+Lib:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConRenderGdi.lib" usp10.lib /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib\manual-link" /NOLOGO /MACHINE:X64 "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererGdi\invalidate.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererGdi\math.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererGdi\paint.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererGdi\state.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererGdi\precomp.obj"
+  gdi.vcxproj -> C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConRenderGdi.lib
+FinalizeBuildStatus:
+  Deleting file "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererGdi\RendererGdi.tlog\unsuccessfulbuild".
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\RendererGdi\RendererGdi.tlog\RendererGdi.lastbuildstate".
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\renderer\gdi\lib\gdi.vcxproj" (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\server\lib\server.vcxproj" (11) on node 1 (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\server\lib\server.vcxproj" (11) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\proxy\Host.Proxy.vcxproj" (12) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\OpenConsoleProxy.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\OpenConsoleProxy.tlog\unsuccessfulbuild".
+Midl:
+  C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64\midl.exe /W1 /nologo /char signed /env x64 /out"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\\" /h "IConsoleHandoff.h" /tlb "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\OpenConsoleProxy.tlb" /target "NT100" IConsoleHandoff.idl 
+  64 bit Processing .\IConsoleHandoff.idl
+  IConsoleHandoff.idl
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\unknwn.idl
+  unknwn.idl
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\wtypes.idl
+  wtypes.idl
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\wtypesbase.idl
+  wtypesbase.idl
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\basetsd.h
+  basetsd.h
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\guiddef.h
+  guiddef.h
+  C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64\midl.exe /W1 /nologo /char signed /env x64 /out"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\\" /h "ITerminalHandoff.h" /tlb "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\OpenConsoleProxy.tlb" /target "NT100" ITerminalHandoff.idl 
+  64 bit Processing .\ITerminalHandoff.idl
+  ITerminalHandoff.idl
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\um\unknwn.idl
+  unknwn.idl
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\wtypes.idl
+  wtypes.idl
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\wtypesbase.idl
+  wtypesbase.idl
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\basetsd.h
+  basetsd.h
+  64 bit Processing C:\Program Files (x86)\Windows Kits\10\Include\10.0.26100.0\shared\guiddef.h
+  guiddef.h
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\"
+  Using normalized configuration "Debug"
+VcpkgInstallManifestDependencies:
+Skipping target "VcpkgInstallManifestDependencies" because all output files are up-to-date with respect to the input files.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I.. /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _USRDLL /D _WINDLL /D _UNICODE /D UNICODE /D REGISTER_PROXY_DLL /D WIN32 /D "PROXY_CLSID_IS={0xDEC4804D,0x56D1,0x4F73,{0x9F,0xBE,0x68,0x28,0xE7,0xC8,0x5C,0x56}}" /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c17 /permissive- /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\vc143.pdb" /external:W4 /Gz /TC /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\\dlldata.c" "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\\IConsoleHandoff_i.c" "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\\IConsoleHandoff_p.c" "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\\ITerminalHandoff_i.c" "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\\ITerminalHandoff_p.c"
+  dlldata.c
+  IConsoleHandoff_i.c
+  IConsoleHandoff_p.c
+  ITerminalHandoff_i.c
+  ITerminalHandoff_p.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\OpenConsoleProxy.dll" /INCREMENTAL /ILK:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\OpenConsoleProxy.ilk" /NOLOGO /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib\manual-link" /NATVIS:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\tools\ConsoleTypes.natvis" onecoreuap_apiset.lib d3dcompiler.lib dwmapi.lib uxtheme.lib shlwapi.lib ntdll.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib\*.lib" /NODEFAULTLIB:libucrtd.lib /DEF:"OpenConsoleProxy.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG:FASTLINK /PDB:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\OpenConsoleProxy.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\OpenConsoleProxy.lib" /MACHINE:X64 /guard:cf  /defaultlib:ucrtd.lib /DLL "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\dlldata.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\IConsoleHandoff_i.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\IConsoleHandoff_p.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\ITerminalHandoff_i.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\ITerminalHandoff_p.obj"
+     Creating library C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\OpenConsoleProxy.lib and object C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\OpenConsoleProxy.exp
+  Host.Proxy.vcxproj -> C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\OpenConsoleProxy.dll
+FinalizeBuildStatus:
+  Deleting file "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\OpenConsoleProxy.tlog\unsuccessfulbuild".
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\OpenConsoleProxy\OpenConsoleProxy.tlog\OpenConsoleProxy.lastbuildstate".
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\proxy\Host.Proxy.vcxproj" (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\Server.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\Server.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\"
+  Using normalized configuration "Debug"
+VcpkgInstallManifestDependencies:
+Skipping target "VcpkgInstallManifestDependencies" because all output files are up-to-date with respect to the input files.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\..\OpenConsoleProxy" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yc"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\ConServer.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConServer.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\precomp.cpp
+  precomp.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\..\OpenConsoleProxy" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yu"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\ConServer.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConServer.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\ApiDispatchers.cpp ..\ApiDispatchersInternal.cpp ..\ApiMessage.cpp ..\ApiMessageState.cpp ..\ApiSorter.cpp ..\ConDrvDeviceComm.cpp ..\ConsoleShimPolicy.cpp ..\DeviceHandle.cpp ..\Entrypoints.cpp ..\IoDispatchers.cpp ..\IoSorter.cpp ..\ObjectHandle.cpp ..\ObjectHeader.cpp ..\ProcessHandle.cpp ..\ProcessList.cpp ..\ProcessPolicy.cpp ..\WaitBlock.cpp ..\WaitQueue.cpp ..\WinNTControl.cpp
+  ApiDispatchers.cpp
+  ApiDispatchersInternal.cpp
+  ApiMessage.cpp
+  ApiMessageState.cpp
+  ApiSorter.cpp
+  ConDrvDeviceComm.cpp
+  ConsoleShimPolicy.cpp
+  DeviceHandle.cpp
+  Entrypoints.cpp
+  IoDispatchers.cpp
+  IoSorter.cpp
+  ObjectHandle.cpp
+  ObjectHeader.cpp
+  ProcessHandle.cpp
+  ProcessList.cpp
+  ProcessPolicy.cpp
+  WaitBlock.cpp
+  WaitQueue.cpp
+  WinNTControl.cpp
+Lib:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConServer.lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib\manual-link" /NOLOGO /MACHINE:X64 "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\ApiDispatchers.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\ApiDispatchersInternal.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\ApiMessage.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\ApiMessageState.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\ApiSorter.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\ConDrvDeviceComm.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\ConsoleShimPolicy.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\DeviceHandle.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\Entrypoints.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\IoDispatchers.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\IoSorter.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\ObjectHandle.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\ObjectHeader.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\precomp.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\ProcessHandle.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\ProcessList.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\ProcessPolicy.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\WaitBlock.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\WaitQueue.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\WinNTControl.obj"
+  server.vcxproj -> C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConServer.lib
+FinalizeBuildStatus:
+  Deleting file "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\Server.tlog\unsuccessfulbuild".
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Server\Server.tlog\Server.lastbuildstate".
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\server\lib\server.vcxproj" (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\terminal\adapter\lib\adapter.vcxproj" (13) on node 1 (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\terminal\adapter\lib\adapter.vcxproj" (13) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\types\lib\types.vcxproj" (14) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\Types.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\Types.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\"
+  Using normalized configuration "Debug"
+VcpkgInstallManifestDependencies:
+Skipping target "VcpkgInstallManifestDependencies" because all output files are up-to-date with respect to the input files.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yc"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\ConTypes.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConTypes.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\precomp.cpp
+  precomp.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yu"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\ConTypes.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConTypes.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\CodepointWidthDetector.cpp ..\ColorFix.cpp ..\convert.cpp ..\colorTable.cpp ..\GlyphWidth.cpp ..\ScreenInfoUiaProviderBase.cpp ..\sgrStack.cpp ..\ThemeUtils.cpp ..\UiaTextRangeBase.cpp ..\UiaTracing.cpp ..\TermControlUiaTextRange.cpp ..\TermControlUiaProvider.cpp ..\Viewport.cpp ..\utils.cpp
+  CodepointWidthDetector.cpp
+  ColorFix.cpp
+  convert.cpp
+  colorTable.cpp
+  GlyphWidth.cpp
+  ScreenInfoUiaProviderBase.cpp
+  sgrStack.cpp
+  ThemeUtils.cpp
+  UiaTextRangeBase.cpp
+  UiaTracing.cpp
+  TermControlUiaTextRange.cpp
+  TermControlUiaProvider.cpp
+  Viewport.cpp
+  utils.cpp
+Lib:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConTypes.lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib\manual-link" /NOLOGO /MACHINE:X64 "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\CodepointWidthDetector.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\ColorFix.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\convert.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\colorTable.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\GlyphWidth.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\ScreenInfoUiaProviderBase.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\sgrStack.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\ThemeUtils.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\UiaTextRangeBase.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\UiaTracing.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\TermControlUiaTextRange.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\TermControlUiaProvider.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\Viewport.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\precomp.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\utils.obj"
+  types.vcxproj -> C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConTypes.lib
+FinalizeBuildStatus:
+  Deleting file "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\Types.tlog\unsuccessfulbuild".
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Types\Types.tlog\Types.lastbuildstate".
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\types\lib\types.vcxproj" (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\terminal\adapter\lib\adapter.vcxproj" (13) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\terminal\input\lib\terminalinput.vcxproj" (15) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalInput\TerminalInput.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalInput\TerminalInput.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\"
+  Using normalized configuration "Debug"
+VcpkgInstallManifestDependencies:
+Skipping target "VcpkgInstallManifestDependencies" because all output files are up-to-date with respect to the input files.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yc"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalInput\TerminalInput.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalInput\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\TerminalInput.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\precomp.cpp
+  precomp.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yu"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalInput\TerminalInput.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalInput\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\TerminalInput.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\mouseInput.cpp ..\mouseInputState.cpp ..\terminalInput.cpp
+  mouseInput.cpp
+  mouseInputState.cpp
+  terminalInput.cpp
+Lib:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\TerminalInput.lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib\manual-link" /NOLOGO /MACHINE:X64 "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalInput\mouseInput.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalInput\mouseInputState.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalInput\terminalInput.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalInput\precomp.obj"
+  terminalinput.vcxproj -> C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\TerminalInput.lib
+FinalizeBuildStatus:
+  Deleting file "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalInput\TerminalInput.tlog\unsuccessfulbuild".
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalInput\TerminalInput.tlog\TerminalInput.lastbuildstate".
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\terminal\input\lib\terminalinput.vcxproj" (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalAdapter\TerminalAdapter.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalAdapter\TerminalAdapter.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\"
+  Using normalized configuration "Debug"
+VcpkgInstallManifestDependencies:
+Skipping target "VcpkgInstallManifestDependencies" because all output files are up-to-date with respect to the input files.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yc"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalAdapter\ConTermAdapt.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalAdapter\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConTermAdapt.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\precomp.cpp
+  precomp.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yu"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalAdapter\ConTermAdapt.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalAdapter\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConTermAdapt.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\adaptDispatch.cpp ..\FontBuffer.cpp ..\InteractDispatch.cpp ..\MacroBuffer.cpp ..\PageManager.cpp ..\SixelParser.cpp ..\adaptDispatchGraphics.cpp ..\terminalOutput.cpp
+  adaptDispatch.cpp
+  FontBuffer.cpp
+  InteractDispatch.cpp
+  MacroBuffer.cpp
+  PageManager.cpp
+  SixelParser.cpp
+  adaptDispatchGraphics.cpp
+  terminalOutput.cpp
+Lib:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConTermAdapt.lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib\manual-link" /NOLOGO /MACHINE:X64 "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalAdapter\adaptDispatch.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalAdapter\FontBuffer.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalAdapter\InteractDispatch.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalAdapter\MacroBuffer.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalAdapter\PageManager.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalAdapter\SixelParser.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalAdapter\adaptDispatchGraphics.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalAdapter\terminalOutput.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalAdapter\precomp.obj"
+  adapter.vcxproj -> C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConTermAdapt.lib
+FinalizeBuildStatus:
+  Deleting file "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalAdapter\TerminalAdapter.tlog\unsuccessfulbuild".
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalAdapter\TerminalAdapter.tlog\TerminalAdapter.lastbuildstate".
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\terminal\adapter\lib\adapter.vcxproj" (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\terminal\parser\lib\parser.vcxproj" (16) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalParser\TerminalParser.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalParser\TerminalParser.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\"
+  Using normalized configuration "Debug"
+VcpkgInstallManifestDependencies:
+Skipping target "VcpkgInstallManifestDependencies" because all output files are up-to-date with respect to the input files.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yc"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalParser\ConTermParser.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalParser\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConTermParser.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\precomp.cpp
+  precomp.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yu"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalParser\ConTermParser.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalParser\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConTermParser.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\OutputStateMachineEngine.cpp ..\stateMachine.cpp ..\tracing.cpp ..\base64.cpp ..\InputStateMachineEngine.cpp
+  OutputStateMachineEngine.cpp
+  stateMachine.cpp
+  tracing.cpp
+  base64.cpp
+  InputStateMachineEngine.cpp
+Lib:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConTermParser.lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib\manual-link" /NOLOGO /MACHINE:X64 "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalParser\OutputStateMachineEngine.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalParser\stateMachine.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalParser\tracing.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalParser\precomp.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalParser\base64.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalParser\InputStateMachineEngine.obj"
+  parser.vcxproj -> C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConTermParser.lib
+FinalizeBuildStatus:
+  Deleting file "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalParser\TerminalParser.tlog\unsuccessfulbuild".
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TerminalParser\TerminalParser.tlog\TerminalParser.lastbuildstate".
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\terminal\parser\lib\parser.vcxproj" (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\tsf\tsf.vcxproj" (17) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TextServicesFramework\TextServ.2FD12FBB.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TextServicesFramework\TextServ.2FD12FBB.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\"
+  Using normalized configuration "Debug"
+VcpkgInstallManifestDependencies:
+Skipping target "VcpkgInstallManifestDependencies" because all output files are up-to-date with respect to the input files.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yc"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TextServicesFramework\ConTSF.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TextServicesFramework\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConTSF.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret precomp.cpp
+  precomp.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yu"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TextServicesFramework\ConTSF.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TextServicesFramework\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConTSF.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret Handle.cpp Implementation.cpp
+  Handle.cpp
+  Implementation.cpp
+Lib:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConTSF.lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib\manual-link" /NOLOGO /MACHINE:X64 "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TextServicesFramework\Handle.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TextServicesFramework\Implementation.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TextServicesFramework\precomp.obj"
+  tsf.vcxproj -> C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConTSF.lib
+FinalizeBuildStatus:
+  Deleting file "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TextServicesFramework\TextServ.2FD12FBB.tlog\unsuccessfulbuild".
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\TextServicesFramework\TextServ.2FD12FBB.tlog\TextServicesFramework.lastbuildstate".
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\tsf\tsf.vcxproj" (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (1) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\lib\hostlib.vcxproj" (18) on node 1 (default targets).
+Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\lib\hostlib.vcxproj" (18) is building "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\audio\midi\lib\midi.vcxproj" (19) on node 1 (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\MidiAudio\MidiAudio.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\MidiAudio\MidiAudio.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\"
+  Using normalized configuration "Debug"
+VcpkgInstallManifestDependencies:
+Skipping target "VcpkgInstallManifestDependencies" because all output files are up-to-date with respect to the input files.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yc"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\MidiAudio\MidiAudio.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\MidiAudio\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\MidiAudio.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\precomp.cpp
+  precomp.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yu"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\MidiAudio\MidiAudio.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\MidiAudio\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\MidiAudio.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\MidiAudio.cpp
+  MidiAudio.cpp
+Lib:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\MidiAudio.lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib\manual-link" /NOLOGO /MACHINE:X64 "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\MidiAudio\MidiAudio.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\MidiAudio\precomp.obj"
+  midi.vcxproj -> C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\MidiAudio.lib
+FinalizeBuildStatus:
+  Deleting file "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\MidiAudio\MidiAudio.tlog\unsuccessfulbuild".
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\MidiAudio\MidiAudio.tlog\MidiAudio.lastbuildstate".
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\audio\midi\lib\midi.vcxproj" (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\Host.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\Host.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\"
+  Using normalized configuration "Debug"
+VcpkgInstallManifestDependencies:
+Skipping target "VcpkgInstallManifestDependencies" because all output files are up-to-date with respect to the input files.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\..\OpenConsoleProxy" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yc"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\ConhostV2Lib.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConhostV2Lib.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\precomp.cpp
+  precomp.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\..\OpenConsoleProxy" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _LIB /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yu"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\ConhostV2Lib.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConhostV2Lib.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\alias.cpp ..\cmdline.cpp ..\ConsoleArguments.cpp ..\readDataCooked.cpp ..\consoleInformation.cpp ..\dbcs.cpp ..\directio.cpp ..\getset.cpp ..\globals.cpp ..\handle.cpp ..\history.cpp ..\init.cpp ..\input.cpp ..\inputBuffer.cpp ..\inputKeyInfo.cpp ..\inputReadHandleData.cpp ..\misc.cpp ..\ntprivapi.cpp ..\output.cpp ..\outputStream.cpp ..\PtySignalInputThread.cpp ..\readData.cpp ..\readDataDirect.cpp ..\readDataRaw.cpp ..\registry.cpp ..\renderData.cpp ..\renderFontDefaults.cpp ..\screenInfo.cpp ..\scrolling.cpp ..\selection.cpp ..\selectionInput.cpp ..\selectionState.cpp ..\settings.cpp ..\srvinit.cpp ..\stream.cpp ..\tracing.cpp ..\utils.cpp ..\VtInputThread.cpp ..\VtIo.cpp ..\writeData.cpp ..\_output.cpp ..\_stream.cpp ..\AccessibilityNotifier.cpp
+  alias.cpp
+  cmdline.cpp
+  ConsoleArguments.cpp
+  readDataCooked.cpp
+  consoleInformation.cpp
+  dbcs.cpp
+  directio.cpp
+  getset.cpp
+  globals.cpp
+  handle.cpp
+  history.cpp
+  init.cpp
+  input.cpp
+  inputBuffer.cpp
+  inputKeyInfo.cpp
+  inputReadHandleData.cpp
+  misc.cpp
+  ntprivapi.cpp
+  output.cpp
+  outputStream.cpp
+  PtySignalInputThread.cpp
+  readData.cpp
+  readDataDirect.cpp
+  readDataRaw.cpp
+  registry.cpp
+  renderData.cpp
+  renderFontDefaults.cpp
+  screenInfo.cpp
+  scrolling.cpp
+  selection.cpp
+  selectionInput.cpp
+  selectionState.cpp
+  settings.cpp
+  srvinit.cpp
+  stream.cpp
+  tracing.cpp
+  utils.cpp
+  VtInputThread.cpp
+  VtIo.cpp
+  writeData.cpp
+  _output.cpp
+  _stream.cpp
+  AccessibilityNotifier.cpp
+Lib:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\Lib.exe /OUT:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConhostV2Lib.lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib\manual-link" /NOLOGO /MACHINE:X64 "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\alias.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\cmdline.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\ConsoleArguments.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\readDataCooked.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\consoleInformation.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\dbcs.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\directio.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\getset.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\globals.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\handle.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\history.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\init.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\input.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\inputBuffer.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\inputKeyInfo.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\inputReadHandleData.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\misc.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\ntprivapi.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\output.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\outputStream.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\precomp.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\PtySignalInputThread.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\readData.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\readDataDirect.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\readDataRaw.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\registry.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\renderData.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\renderFontDefaults.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\screenInfo.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\scrolling.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\selection.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\selectionInput.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\selectionState.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\settings.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\srvinit.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\stream.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\tracing.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\utils.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\VtInputThread.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\VtIo.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\writeData.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\_output.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\_stream.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\AccessibilityNotifier.obj"
+  hostlib.vcxproj -> C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConhostV2Lib.lib
+FinalizeBuildStatus:
+  Deleting file "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\Host.tlog\unsuccessfulbuild".
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host\Host.tlog\Host.lastbuildstate".
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\lib\hostlib.vcxproj" (default targets).
+PrepareForBuild:
+  Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+InitializeBuildStatus:
+  Creating "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host.EXE\Host.EXE.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host.EXE\Host.EXE.tlog\unsuccessfulbuild".
+VcpkgTripletSelection:
+  Using triplet "x64-windows-static" from "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\"
+  Using normalized configuration "Debug"
+VcpkgInstallManifestDependencies:
+Skipping target "VcpkgInstallManifestDependencies" because all output files are up-to-date with respect to the input files.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I.. /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host.EXE\..\OpenConsoleProxy" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yc"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host.EXE\OpenConsole.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host.EXE\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host.EXE\vc143.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret ..\precomp.cpp
+  precomp.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\CL.exe /c /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\include\\" /I.. /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host.EXE\..\OpenConsoleProxy" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\src\inc" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Console" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\dep\Win32K" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\chromium" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\interval_tree" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\oss\pcg\include" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /Zi /JMC /nologo /W4 /WX /diagnostics:column /sdl /MP /Od /Ob1 /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D _DEBUG /D DBG /D _WINDOWS /D EXTERNAL_BUILD /D _SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING /Zc:preprocessor /Gm- /EHsc /RTC1 /MTd /GS /guard:cf /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR- /std:c++20 /permissive- /Yu"precomp.h" /Fp"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host.EXE\OpenConsole.pch" /Fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host.EXE\\" /Fd"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host.EXE\vc143.pdb" /external:W4 /Gd /TP /wd4201 /wd4312 /wd4467 /wd5105 /wd26434 /wd26445 /wd26456 /wd26478 /wd26494 /FI"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\bin\Debug\inc\TilFeatureStaging.h" /FC /errorReport:queue /we4189 /we4100 /we4242 /we4389 /we4244  /utf-8 /Zc:__cplusplus /Zc:__STDC__ /Zc:enumTypes /Zc:inline /Zc:templateScope /Zc:throwingNew /diagnostics:caret CConsoleHandoff.cpp exemain.cpp
+  CConsoleHandoff.cpp
+  exemain.cpp
+ResourceCompile:
+  C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64\rc.exe /D _UNICODE /D UNICODE /D WT_BRANDING_DEV /D EXTERNAL_BUILD /D _UNICODE /D UNICODE /l"0x0409" /I"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\include" /nologo /fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host.EXE\Host.EXE.res" Host.EXE.rc 
+ManifestResourceCompile:
+  C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64\rc.exe /nologo /fo"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host.EXE\OpenConsole.exe.embed.manifest.res" "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host.EXE\OpenConsole_manifest.rc" 
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\OpenConsole.exe" /INCREMENTAL /ILK:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host.EXE\OpenConsole.ilk" /NOLOGO /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib" /LIBPATH:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib\manual-link" /NATVIS:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\tools\ConsoleTypes.natvis" /NATVIS:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\natvis\wil.natvis" /NATVIS:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\packages\Microsoft.Windows.ImplementationLibrary.1.0.250325.1\build\native\..\..\natvis\wil.natstepfilter" onecoreuap_apiset.lib d3dcompiler.lib dwmapi.lib uxtheme.lib shlwapi.lib ntdll.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib winmm.lib imm32.lib Delayimp.lib "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\\obj\x64\vcpkg\x64-windows-static\debug\lib\*.lib" /NODEFAULTLIB:libucrtd.lib /DELAYLOAD:icu.dll /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:openconsole.exe.manifest /DEBUG:FASTLINK /PDB:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\OpenConsole.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\OpenConsole.lib" /MACHINE:X64 /guard:cf  /defaultlib:ucrtd.lib "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host.EXE\Host.EXE.res"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host.EXE\precomp.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host.EXE\CConsoleHandoff.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host.EXE\exemain.obj"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConBufferOut.lib"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConInteractivityBaseLib.lib"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConRenderAtlas.lib"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConInteractivityWin32Lib.lib"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConInt.lib"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConProps.lib"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConRenderBase.lib"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConRenderGdi.lib"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\OpenConsoleProxy.lib"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConServer.lib"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConTypes.lib"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\TerminalInput.lib"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConTermAdapt.lib"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConTermParser.lib"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConTSF.lib"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\MidiAudio.lib"
+  "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\ConhostV2Lib.lib"
+  Host.EXE.vcxproj -> C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\bin\x64\Debug\OpenConsole.exe
+FinalizeBuildStatus:
+  Deleting file "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host.EXE\Host.EXE.tlog\unsuccessfulbuild".
+  Touching "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\obj\x64\Debug\Host.EXE\Host.EXE.tlog\Host.EXE.lastbuildstate".
+Done Building Project "C:\Users\nick0\Documents\GitHub\Projects\NT\AI-Dev-Terminal\src\host\exe\Host.EXE.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:55.35
