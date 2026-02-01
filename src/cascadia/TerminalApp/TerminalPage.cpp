@@ -1,4 +1,7 @@
 
+
+
+
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT license.
 
@@ -23,6 +26,8 @@
 #include "SnippetsPaneContent.h"
 #include "TabRowControl.h"
 #include "TerminalSettingsCache.h"
+
+#include <vector>
 
 #include "LaunchPositionRequest.g.cpp"
 #include "RenameWindowRequestedArgs.g.cpp"
@@ -622,7 +627,16 @@ namespace winrt::TerminalApp::implementation
     // - <none>
     void TerminalPage::_OnDispatchCommandRequested(const IInspectable& sender, const Microsoft::Terminal::Settings::Model::Command& command)
     {
+        // Check if this is a slash menu command (has no valid action)
         const auto& actionAndArgs = command.ActionAndArgs();
+        if (!actionAndArgs || actionAndArgs.Action() == ShortcutAction::Invalid)
+        {
+            // This is a slash menu command - get the command name and handle it
+            const auto commandName = command.Name();
+            _SlashMenuCommandExecutedHandler(sender, commandName);
+            return;
+        }
+        
         _actionDispatch->DoAction(sender, actionAndArgs);
     }
 
@@ -1984,7 +1998,16 @@ namespace winrt::TerminalApp::implementation
         {
             term.CompletionsChanged({ get_weak(), &TerminalPage::_ControlCompletionsChangedHandler });
         }
+
+        // Register slash command menu events
+        term.SlashMenuOpen({ get_weak(), &TerminalPage::_SlashMenuOpenHandler });
+        term.SlashMenuBufferChanged({ get_weak(), &TerminalPage::_SlashMenuBufferChangedHandler });
+        term.SlashMenuCommandExecuted({ get_weak(), &TerminalPage::_SlashMenuCommandExecutedHandler });
+        term.SlashMenuClosed({ get_weak(), &TerminalPage::_SlashMenuClosedHandler });
+        term.SlashMenuNavigationRequested({ get_weak(), &TerminalPage::_SlashMenuNavigationRequestedHandler });
+
         winrt::weak_ref<TermControl> weakTerm{ term };
+
         term.ContextMenu().Opening([weak = get_weak(), weakTerm](auto&& sender, auto&& /*args*/) {
             if (const auto& page{ weak.get() })
             {
@@ -5252,7 +5275,257 @@ namespace winrt::TerminalApp::implementation
                    characterSize.Height);
     }
 
+    // Method Description:
+    // - Handler for when the slash command menu is opened
+    // Arguments:
+    // - sender: the control raising this event
+    // - args: unused
+    void TerminalPage::_SlashMenuOpenHandler(const IInspectable sender, const IInspectable /*args*/)
+    {
+        // Build the list of available slash commands.
+        // Display names do NOT include the leading '/'.
+        auto commands = winrt::single_threaded_vector<winrt::Microsoft::Terminal::Settings::Model::Command>();
+
+        struct SlashCommandEntry
+        {
+            std::wstring_view name;
+        };
+
+        static constexpr std::array<SlashCommandEntry, 1> slashCommands{ {
+            { L"agents" },
+        } };
+
+        for (const auto& entry : slashCommands)
+        {
+            auto cmd = winrt::Microsoft::Terminal::Settings::Model::Command::NewUserCommand();
+            cmd.Name(winrt::hstring{ entry.name });
+            commands.Append(cmd);
+        }
+
+        // Open the suggestions control with cleared input.
+        // Also enable the arcade theme for slash menu.
+        if (const auto sxnUi{ LoadSuggestionsUI() })
+        {
+            sxnUi.ArcadeThemeEnabled(true);
+        }
+        _OpenSuggestions(sender.try_as<TermControl>(), commands, TerminalApp::SuggestionsMode::Menu, L"");
+    }
+
+    // Method Description:
+    // - Handler for when the slash command buffer changes (user types more characters)
+    // Arguments:
+    // - sender: the control raising this event
+    // - buffer: the current buffer content (e.g., "/att")
+    void TerminalPage::_SlashMenuBufferChangedHandler(const IInspectable sender, const winrt::hstring buffer)
+    {
+        // Filter the commands based on the buffer.
+        // If the buffer starts with '/', ignore it for filtering.
+        auto commands = winrt::single_threaded_vector<winrt::Microsoft::Terminal::Settings::Model::Command>();
+
+        std::wstring filterText{ buffer };
+        if (!filterText.empty() && filterText[0] == L'/')
+        {
+            filterText.erase(0, 1);
+        }
+
+        struct SlashCommandEntry
+        {
+            std::wstring_view name;
+        };
+
+        static constexpr std::array<SlashCommandEntry, 1> slashCommands{ {
+            { L"agents" },
+        } };
+
+        for (const auto& entry : slashCommands)
+        {
+            if (filterText.empty() || entry.name.starts_with(filterText))
+            {
+                auto cmd = winrt::Microsoft::Terminal::Settings::Model::Command::NewUserCommand();
+                cmd.Name(winrt::hstring{ entry.name });
+                commands.Append(cmd);
+            }
+        }
+
+        if (const auto sxnUi{ LoadSuggestionsUI() })
+        {
+            sxnUi.ArcadeThemeEnabled(true);
+        }
+        _OpenSuggestions(sender.try_as<TermControl>(), commands, TerminalApp::SuggestionsMode::Menu, winrt::hstring{ filterText });
+    }
+
+
+
+
+    // Method Description:
+    // - Handler for when a slash command is executed (user presses Enter)
+    // Arguments:
+    // - sender: the control raising this event
+    // - command: the command that was selected (e.g., "attach")
+    void TerminalPage::_SlashMenuCommandExecutedHandler(const IInspectable sender, const winrt::hstring command)
+    {
+        // Execute the selected command
+        std::wstring commandStr{ command };
+        
+        // Check if this is an agent selection (no "/" prefix)
+        if (commandStr == L"Gemini" || commandStr == L"Codex" || commandStr == L"Copilot")
+        {
+            _LaunchAgentCommand(sender, command);
+            return;
+        }
+        
+        // Remove leading "/" if present for comparison
+        if (!commandStr.empty() && commandStr[0] == L'/')
+        {
+            commandStr = commandStr.substr(1);
+        }
+        
+        // Handle agents submenu
+        if (commandStr == L"agents")
+        {
+            // Dispatch to open agents submenu on UI thread with slight delay
+            auto weakThis = get_weak();
+            Dispatcher().RunAsync(Windows::UI::Core::CoreDispatcherPriority::Normal, [weakThis, sender]() {
+                if (auto strongThis = weakThis.get())
+                {
+                    strongThis->_OpenAgentsSubmenu(sender);
+                }
+            });
+        }
+    }
+
+    // Method Description:
+    // - Handler for when the slash command menu is closed
+    // Arguments:
+    // - sender: the control raising this event
+    // - args: unused
+    void TerminalPage::_SlashMenuClosedHandler(const IInspectable /*sender*/, const IInspectable /*args*/)
+    {
+        // Close the suggestions control if it's open
+        if (const auto& sxnUi{ SuggestionsElement() })
+        {
+            sxnUi.Visibility(Visibility::Collapsed);
+            // Clear input so the user starts fresh next time.
+            // Reset theme override so other consumers (palette, etc.) keep their standard look.
+            sxnUi.ArcadeThemeEnabled(false);
+        }
+    }
+
+    // Method Description:
+    // - Handler for navigation requests in the slash menu (up/down/tab keys)
+    // Arguments:
+    // - sender: the control raising this event
+    // - args: the key event args containing which key was pressed
+    void TerminalPage::_SlashMenuNavigationRequestedHandler(const IInspectable /*sender*/, const winrt::Microsoft::Terminal::Control::KeySentEventArgs args)
+    {
+        // Forward navigation to the suggestions control
+        if (const auto& sxnUi{ SuggestionsElement() })
+        {
+            const auto vkey = args.VKey();
+            if (vkey == VK_UP)
+            {
+                sxnUi.SelectNextItem(false); // Move up
+            }
+            else if (vkey == VK_DOWN || vkey == VK_TAB)
+            {
+                sxnUi.SelectNextItem(true); // Move down
+            }
+        }
+    }
+
+    // Method Description:
+    // - Opens the agents submenu showing available agentic tools
+    // Arguments:
+    // - sender: the control raising this event
+    // Return Value:
+    // - <none>
+    void TerminalPage::_OpenAgentsSubmenu(const IInspectable sender)
+    {
+        // Build the list of available agent commands
+        auto commands = winrt::single_threaded_vector<winrt::Microsoft::Terminal::Settings::Model::Command>();
+        
+        // Add Gemini agent
+        auto geminiCmd = winrt::Microsoft::Terminal::Settings::Model::Command::NewUserCommand();
+        geminiCmd.Name(L"Gemini");
+        commands.Append(geminiCmd);
+        
+        // Add Codex agent
+        auto codexCmd = winrt::Microsoft::Terminal::Settings::Model::Command::NewUserCommand();
+        codexCmd.Name(L"Codex");
+        commands.Append(codexCmd);
+        
+        // Add Copilot agent
+        auto copilotCmd = winrt::Microsoft::Terminal::Settings::Model::Command::NewUserCommand();
+        copilotCmd.Name(L"Copilot");
+        commands.Append(copilotCmd);
+        
+        // Open the suggestions control with the agent commands
+        // Use empty filter text so agent names are visible
+        _OpenSuggestions(sender.try_as<TermControl>(), commands, TerminalApp::SuggestionsMode::Menu, L"");
+    }
+
+    // Method Description:
+    // - Launches a new window with the specified agent command
+    // Arguments:
+    // - sender: the control raising this event
+    // - agentName: the name of the agent to launch (e.g., "Gemini", "Codex", "Copilot")
+    // Return Value:
+    // - <none>
+    void TerminalPage::_LaunchAgentCommand(const IInspectable sender, const winrt::hstring agentName)
+    {
+        std::wstring agentStr{ agentName };
+        
+        // Build the command line based on the agent.
+        // Launch through pwsh so we always start PowerShell 7.x, and we don't
+        // rely on CreateProcess being able to directly resolve the agent exe.
+        winrt::hstring agentCommand;
+        if (agentStr == L"Gemini")
+        {
+            agentCommand = L"gemini";
+        }
+        else if (agentStr == L"Codex")
+        {
+            agentCommand = L"codex";
+        }
+        else if (agentStr == L"Copilot")
+        {
+            agentCommand = L"copilot";
+        }
+        
+        if (!agentCommand.empty())
+        {
+            NewTerminalArgs newTerminalArgs{};
+            // -NoLogo: faster startup
+            // -NoExit: keep tab open after launching
+            // -Command: run the agent command
+            newTerminalArgs.Commandline(winrt::hstring{ L"pwsh -NoLogo -NoExit -Command " } + agentCommand);
+
+            // Start in the current window's effective working directory.
+            // This matches the path the user is currently "in" for this window.
+            winrt::hstring cwd;
+            if (const auto control = sender.try_as<Microsoft::Terminal::Control::TermControl>())
+            {
+                cwd = control.WorkingDirectory();
+            }
+            if (cwd.empty())
+            {
+                cwd = _WindowProperties.VirtualWorkingDirectory();
+            }
+            if (cwd.empty())
+            {
+                // Avoid falling back to the packaged app's default (often System32).
+                cwd = L"%USERPROFILE%";
+            }
+            newTerminalArgs.StartingDirectory(cwd);
+
+            // Open in a new tab in this window.
+            LOG_IF_FAILED(_OpenNewTab(newTerminalArgs));
+        }
+    }
+
+
     void TerminalPage::_PopulateContextMenu(const TermControl& control,
+
                                             const MUX::Controls::CommandBarFlyout& menu,
                                             const bool withSelection)
     {

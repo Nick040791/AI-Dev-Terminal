@@ -1497,10 +1497,8 @@ namespace winrt::Microsoft::Terminal::Control::implementation
         const auto ch = e.Character();
 
         // ============================================
-        // SLASH COMMAND MENU CHARACTER INTERCEPTION - DISABLED FOR DEBUGGING
+        // SLASH COMMAND MENU CHARACTER INTERCEPTION
         // ============================================
-        // TODO: Re-enable after fixing crash
-        /*
         if (_isSlashMenuOpen)
         {
             if (ch >= L' ' && ch != 0x7F)
@@ -1522,10 +1520,10 @@ namespace winrt::Microsoft::Terminal::Control::implementation
                 return;
             }
         }
-        */
         // ============================================
         // END SLASH COMMAND CHARACTER INTERCEPTION
         // ============================================
+
 
         const auto keyStatus = e.KeyStatus();
         const auto scanCode = gsl::narrow_cast<WORD>(keyStatus.ScanCode);
@@ -1609,10 +1607,9 @@ namespace winrt::Microsoft::Terminal::Control::implementation
         }
 
         // ============================================
-        // SLASH COMMAND MENU INTERCEPTION - DISABLED FOR DEBUGGING
         // ============================================
-        // TODO: Re-enable after fixing crash
-        /*
+        // SLASH COMMAND MENU INTERCEPTION
+        // ============================================
         if (_isSlashMenuOpen)
         {
             if (keyDown)
@@ -1655,10 +1652,10 @@ namespace winrt::Microsoft::Terminal::Control::implementation
             _OpenSlashMenu();
             return true;
         }
-        */
         // ============================================
         // END SLASH COMMAND MENU INTERCEPTION
         // ============================================
+
 
         // GH#11076:
         // For some weird reason we sometimes receive a WM_KEYDOWN
@@ -3098,6 +3095,90 @@ namespace winrt::Microsoft::Terminal::Control::implementation
     }
 
     // Method Description:
+    // - Opens the slash command menu and initializes the buffer with "/"
+    // Arguments:
+    // - <none>
+    // Return Value:
+    // - <none>
+    void TermControl::_OpenSlashMenu()
+    {
+        if (_isSlashMenuOpen)
+        {
+            return;
+        }
+
+        _isSlashMenuOpen = true;
+        _slashMenuBuffer = L"/";
+
+        // Raise event to notify listeners that the menu should be displayed
+        SlashMenuOpen.raise(*this, nullptr);
+        SlashMenuBufferChanged.raise(*this, winrt::hstring{ _slashMenuBuffer });
+    }
+
+    // Method Description:
+    // - Closes the slash command menu
+    // Arguments:
+    // - executeCommand: if true, execute the command; if false, just close
+    // Return Value:
+    // - <none>
+    void TermControl::_CloseSlashMenu(bool executeCommand)
+    {
+        if (!_isSlashMenuOpen)
+        {
+            return;
+        }
+
+        if (executeCommand && _slashMenuBuffer.length() > 1)
+        {
+            // Extract the command (without the leading '/')
+            const auto command = _slashMenuBuffer.substr(1);
+            
+            // Raise event to execute the selected command
+            SlashMenuCommandExecuted.raise(*this, winrt::hstring{ command });
+        }
+
+        _isSlashMenuOpen = false;
+        _slashMenuBuffer.clear();
+
+        // Raise event to notify listeners that the menu should be closed
+        SlashMenuClosed.raise(*this, nullptr);
+    }
+
+    // Method Description:
+    // - Handles input when the slash menu is open
+    // Arguments:
+    // - vkey: virtual key code
+    // - character: the character (if applicable)
+    // - keyDown: true if key down, false if key up
+    // Return Value:
+    // - true if handled
+    bool TermControl::_HandleSlashMenuInput(WORD vkey, wchar_t character, bool keyDown)
+    {
+        if (!keyDown)
+        {
+            return true;
+        }
+
+        // Navigation keys - pass to menu for selection
+        if (vkey == VK_UP || vkey == VK_DOWN || vkey == VK_TAB)
+        {
+            SlashMenuNavigationRequested.raise(*this, winrt::make<KeySentEventArgs>(vkey, static_cast<WORD>(0), ControlKeyStates{}, keyDown));
+            return true;
+        }
+
+
+        // Character input - add to buffer for filtering
+        if (character >= L' ' && character != 0x7F)
+        {
+            _slashMenuBuffer += character;
+            SlashMenuBufferChanged.raise(*this, winrt::hstring{ _slashMenuBuffer });
+            return true;
+        }
+
+        return false;
+    }
+
+    // Method Description:
     // - Gets the corresponding viewport pixel position for the cursor
     //    by excluding the padding.
     // Arguments:
@@ -4219,44 +4300,5 @@ namespace winrt::Microsoft::Terminal::Control::implementation
             _core.ForceCursorVisible(cursorVisibility == CursorDisplayState::Shown);
         }
     }
-
-    // ============================================
-    // SLASH COMMAND MENU IMPLEMENTATION
-    // ============================================
-
-    void TermControl::_OpenSlashMenu()
-    {
-        _isSlashMenuOpen = true;
-        _slashMenuBuffer.clear();
-        _slashMenuBuffer = L"/"; // Start with the trigger character for display
-
-        // Raise event to notify UI layer
-        SlashMenuOpened.raise(*this, nullptr);
-        SlashMenuBufferChanged.raise(*this, winrt::hstring{ _slashMenuBuffer });
-    }
-
-    void TermControl::_CloseSlashMenu(bool executeCommand)
-    {
-        _isSlashMenuOpen = false;
-
-        if (executeCommand && _slashMenuBuffer.length() > 1)
-        {
-            // Extract command (remove leading '/')
-            auto command = _slashMenuBuffer.substr(1);
-
-            // Raise event with the command for external handling
-            SlashCommandInvoked.raise(*this, winrt::hstring{ command });
-        }
-
-        _slashMenuBuffer.clear();
-        SlashMenuClosed.raise(*this, nullptr);
-    }
-
-    bool TermControl::_HandleSlashMenuInput(WORD /*vkey*/, wchar_t /*character*/, bool /*keyDown*/)
-    {
-        // Handle navigation keys for menu selection
-        // This can be extended to emit navigation events for your XAML UI
-        // For now, just return true to indicate the key was handled
-        return true;
-    }
 }
+

@@ -730,17 +730,21 @@ namespace winrt::TerminalApp::implementation
                     // ever allow non-sendInput actions.
                     DispatchCommandRequested.raise(*this, command);
 
-                    if (const auto& sendInputCmd = command.ActionAndArgs().Args().try_as<SendInputArgs>())
+                    // Only check for sendInput if the command has ActionAndArgs
+                    if (const auto& actionAndArgs = command.ActionAndArgs())
                     {
-                        if (til::starts_with(sendInputCmd.Input(), L"winget"))
+                        if (const auto& sendInputCmd = actionAndArgs.Args().try_as<SendInputArgs>())
                         {
-                            TraceLoggingWrite(
-                                g_hTerminalAppProvider,
-                                "QuickFixSuggestionUsed",
-                                TraceLoggingDescription("Event emitted when a winget suggestion from is used"),
-                                TraceLoggingValue("SuggestionsUI", "Source"),
-                                TraceLoggingKeyword(MICROSOFT_KEYWORD_MEASURES),
-                                TelemetryPrivacyDataTag(PDT_ProductAndServiceUsage));
+                            if (til::starts_with(sendInputCmd.Input(), L"winget"))
+                            {
+                                TraceLoggingWrite(
+                                    g_hTerminalAppProvider,
+                                    "QuickFixSuggestionUsed",
+                                    TraceLoggingDescription("Event emitted when a winget suggestion from is used"),
+                                    TraceLoggingValue("SuggestionsUI", "Source"),
+                                    TraceLoggingKeyword(MICROSOFT_KEYWORD_MEASURES),
+                                    TelemetryPrivacyDataTag(PDT_ProductAndServiceUsage));
+                            }
                         }
                     }
 
@@ -791,6 +795,7 @@ namespace winrt::TerminalApp::implementation
     // - <none>
     void SuggestionsControl::_dismissPalette()
     {
+        _searchBox().Text(L"");
         _close();
 
         TraceLoggingWrite(
@@ -1221,6 +1226,25 @@ namespace winrt::TerminalApp::implementation
     {
         Mode(mode);
         SetCommands(commands);
+
+        // Apply arcade-green styling if requested (used by slash menu).
+        if (ArcadeThemeEnabled())
+        {
+            if (const auto backdrop = _backdrop())
+            {
+                backdrop.Background(Resources().Lookup(box_value(L"ArcadeBrushBackground")).as<Windows::UI::Xaml::Media::Brush>());
+                backdrop.BorderBrush(Resources().Lookup(box_value(L"ArcadeBrushBorder")).as<Windows::UI::Xaml::Media::Brush>());
+                backdrop.BorderThickness(Resources().Lookup(box_value(L"ArcadeBorderThickness")).as<Windows::UI::Xaml::Thickness>());
+                backdrop.CornerRadius(Resources().Lookup(box_value(L"ArcadeCornerRadius")).as<Windows::UI::Xaml::CornerRadius>());
+            }
+            _searchBox().Style(Resources().Lookup(box_value(L"ArcadeSearchBoxStyle")).as<Windows::UI::Xaml::Style>());
+            _filteredActionsView().Style(Resources().Lookup(box_value(L"ArcadeListViewStyle")).as<Windows::UI::Xaml::Style>());
+            _filteredActionsView().ItemContainerStyle(Resources().Lookup(box_value(L"ArcadeListViewItemStyle")).as<Windows::UI::Xaml::Style>());
+
+            // Match other text elements to the arcade palette.
+            _parentCommandText().Foreground(Resources().Lookup(box_value(L"ArcadeBrushMutedForeground")).as<Windows::UI::Xaml::Media::Brush>());
+            _noMatchesText().Child().as<Windows::UI::Xaml::Controls::TextBlock>().Foreground(Resources().Lookup(box_value(L"ArcadeBrushMutedForeground")).as<Windows::UI::Xaml::Media::Brush>());
+        }
 
         // LOAD BEARING
         // The control must become visible here, BEFORE we try to get its ActualWidth/Height.

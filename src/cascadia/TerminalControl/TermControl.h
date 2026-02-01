@@ -219,10 +219,12 @@ namespace winrt::Microsoft::Terminal::Control::implementation
         til::typed_event<IInspectable, Control::WindowSizeChangedEventArgs> WindowSizeChanged;
 
         // Slash Command Menu Events
-        til::typed_event<IInspectable, winrt::hstring> SlashCommandInvoked;
+        til::typed_event<> SlashMenuOpen;
         til::typed_event<IInspectable, winrt::hstring> SlashMenuBufferChanged;
-        til::typed_event<> SlashMenuOpened;
+        til::typed_event<IInspectable, winrt::hstring> SlashMenuCommandExecuted;
         til::typed_event<> SlashMenuClosed;
+        til::typed_event<IInspectable, Control::KeySentEventArgs> SlashMenuNavigationRequested;
+
 
         // UNDER NO CIRCUMSTANCES SHOULD YOU ADD A (PROJECTED_)FORWARDED_TYPED_EVENT HERE
         // Those attach the handler to the core directly, and will explode if

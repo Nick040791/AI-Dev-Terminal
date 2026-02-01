@@ -82,6 +82,14 @@ namespace Microsoft.Terminal.Control
         event Windows.Foundation.TypedEventHandler<Object, StringSentEventArgs> StringSent;
         event Windows.Foundation.TypedEventHandler<Object, SearchMissingCommandEventArgs> SearchMissingCommand;
 
+        // Slash Command Menu Events
+        event Windows.Foundation.TypedEventHandler<Object, Object> SlashMenuOpen;
+        event Windows.Foundation.TypedEventHandler<Object, String> SlashMenuBufferChanged;
+        event Windows.Foundation.TypedEventHandler<Object, String> SlashMenuCommandExecuted;
+        event Windows.Foundation.TypedEventHandler<Object, Object> SlashMenuClosed;
+        event Windows.Foundation.TypedEventHandler<Object, KeySentEventArgs> SlashMenuNavigationRequested;
+
+
 
         Microsoft.UI.Xaml.Controls.CommandBarFlyout ContextMenu { get; };
         Microsoft.UI.Xaml.Controls.CommandBarFlyout SelectionContextMenu { get; };
@@ -108,6 +116,7 @@ namespace Microsoft.Terminal.Control
         void RestoreFromPath(String path);
         void PersistTo(Int64 handle);
         void OpenCWD();
+        String WorkingDirectory();
         void Close();
         Windows.Foundation.Size CharacterDimensions { get; };
         Windows.Foundation.Size MinimumSize { get; };

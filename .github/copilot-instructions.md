@@ -3,6 +3,7 @@
 ## General Guidelines
 - First general instruction
 - Second general instruction
+- For the slash command menu: pressing '/' should open the menu and clear the input; menu options should not include the leading '/' (e.g., show 'agents'); closing the menu should clear the input so the user starts fresh.
 
 ## Build Configuration
 pwsh -ExecutionPolicy Bypass .\tools\scripts\SetBuildToX64.ps1

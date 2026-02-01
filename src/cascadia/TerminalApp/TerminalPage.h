@@ -542,6 +542,16 @@ namespace winrt::TerminalApp::implementation
 
         void _ShowWindowChangedHandler(const IInspectable sender, const winrt::Microsoft::Terminal::Control::ShowWindowArgs args);
         Windows::Foundation::IAsyncAction _SearchMissingCommandHandler(const IInspectable sender, const winrt::Microsoft::Terminal::Control::SearchMissingCommandEventArgs args);
+
+        // Slash Command Menu Handlers
+        void _SlashMenuOpenHandler(const IInspectable sender, const IInspectable args);
+        void _SlashMenuBufferChangedHandler(const IInspectable sender, const winrt::hstring buffer);
+        void _SlashMenuCommandExecutedHandler(const IInspectable sender, const winrt::hstring command);
+        void _SlashMenuClosedHandler(const IInspectable sender, const IInspectable args);
+        void _SlashMenuNavigationRequestedHandler(const IInspectable sender, const winrt::Microsoft::Terminal::Control::KeySentEventArgs args);
+        void _OpenAgentsSubmenu(const IInspectable sender);
+        void _LaunchAgentCommand(const IInspectable sender, const winrt::hstring agentName);
+
         static Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<winrt::Microsoft::Management::Deployment::MatchResult>> _FindPackageAsync(hstring query);
 
         void _WindowSizeChanged(const IInspectable sender, const winrt::Microsoft::Terminal::Control::WindowSizeChangedEventArgs args);

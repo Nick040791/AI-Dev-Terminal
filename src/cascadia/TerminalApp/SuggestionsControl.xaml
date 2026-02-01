@@ -25,6 +25,45 @@
 
     <UserControl.Resources>
         <ResourceDictionary>
+            <!-- Arcade retro green theme resources (applied when enabled) -->
+            <SolidColorBrush x:Key="ArcadeBrushBackground" Color="#FF00180D" />
+            <SolidColorBrush x:Key="ArcadeBrushBorder" Color="#FF00FF66" />
+            <SolidColorBrush x:Key="ArcadeBrushForeground" Color="#FF00FF66" />
+            <SolidColorBrush x:Key="ArcadeBrushMutedForeground" Color="#FF00B84A" />
+            <SolidColorBrush x:Key="ArcadeBrushSelection" Color="#3300FF66" />
+            <SolidColorBrush x:Key="ArcadeBrushSelectionBorder" Color="#FF00FF66" />
+
+            <CornerRadius x:Key="ArcadeCornerRadius">6</CornerRadius>
+            <Thickness x:Key="ArcadeBorderThickness">2</Thickness>
+
+            <!-- Prefer a mono/terminal feel; falls back to system monospace if Cascadia Mono isn't present -->
+            <FontFamily x:Key="ArcadeFontFamily">Cascadia Mono, Consolas, Courier New</FontFamily>
+            <x:Double x:Key="ArcadeFontSize">13</x:Double>
+
+            <Style x:Key="ArcadeSearchBoxStyle" TargetType="TextBox">
+                <Setter Property="FontFamily" Value="{StaticResource ArcadeFontFamily}" />
+                <Setter Property="FontSize" Value="{StaticResource ArcadeFontSize}" />
+                <Setter Property="Foreground" Value="{StaticResource ArcadeBrushForeground}" />
+                <Setter Property="Background" Value="{StaticResource ArcadeBrushBackground}" />
+                <Setter Property="BorderBrush" Value="{StaticResource ArcadeBrushBorder}" />
+                <Setter Property="BorderThickness" Value="{StaticResource ArcadeBorderThickness}" />
+            </Style>
+
+            <Style x:Key="ArcadeListViewStyle" TargetType="ListView">
+                <Setter Property="FontFamily" Value="{StaticResource ArcadeFontFamily}" />
+                <Setter Property="FontSize" Value="{StaticResource ArcadeFontSize}" />
+                <Setter Property="Foreground" Value="{StaticResource ArcadeBrushForeground}" />
+                <Setter Property="Background" Value="{StaticResource ArcadeBrushBackground}" />
+            </Style>
+
+            <Style x:Key="ArcadeListViewItemStyle" TargetType="ListViewItem">
+                <Setter Property="FontFamily" Value="{StaticResource ArcadeFontFamily}" />
+                <Setter Property="FontSize" Value="{StaticResource ArcadeFontSize}" />
+                <Setter Property="Foreground" Value="{StaticResource ArcadeBrushForeground}" />
+                <Setter Property="Background" Value="Transparent" />
+                <!-- Selection highlight is applied in code-behind because WinUI/XamlIslands doesn't support WPF-style ControlTemplate.Triggers here. -->
+            </Style>
+
             <DataTemplate x:Key="ListItemTemplate"
                           x:DataType="local:FilteredCommand">
                 <ListViewItem Height="32"
@@ -117,7 +156,7 @@
               Background="{ThemeResource FlyoutPresenterBackground}"
               BorderBrush="{ThemeResource FlyoutBorderThemeBrush}"
               BorderThickness="{ThemeResource FlyoutBorderThemeThickness}"
-              CornerRadius="{ThemeResource OverlayCornerRadius}"
+              CornerRadius="{ThemeResource ControlCornerRadius}"
               PointerPressed="_backdropPointerPressed"
               Shadow="{StaticResource SharedShadow}"
               Translation="0,0,32">
@@ -211,7 +250,7 @@
               Background="{ThemeResource FlyoutPresenterBackground}"
               BorderBrush="{ThemeResource FlyoutBorderThemeBrush}"
               BorderThickness="{ThemeResource FlyoutBorderThemeThickness}"
-              CornerRadius="{ThemeResource OverlayCornerRadius}"
+              CornerRadius="{ThemeResource ControlCornerRadius}"
               PointerPressed="_backdropPointerPressed"
               Shadow="{StaticResource SharedShadow}"
               Translation="0,0,32">

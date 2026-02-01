@@ -34,6 +34,8 @@ namespace TerminalApp
 
         SuggestionsMode Mode { get; set; };
 
+        Boolean ArcadeThemeEnabled { get; set; };
+
         void SetCommands(Windows.Foundation.Collections.IVector<Microsoft.Terminal.Settings.Model.Command> actions);
         void SelectNextItem(Boolean moveDown);
 

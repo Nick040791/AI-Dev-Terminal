@@ -55,6 +55,7 @@ namespace winrt::TerminalApp::implementation
         WINRT_OBSERVABLE_PROPERTY(winrt::hstring, ControlName, PropertyChanged.raise);
         WINRT_OBSERVABLE_PROPERTY(winrt::hstring, ParentCommandName, PropertyChanged.raise);
         WINRT_OBSERVABLE_PROPERTY(winrt::hstring, ParsedCommandLineText, PropertyChanged.raise);
+        WINRT_OBSERVABLE_PROPERTY(bool, ArcadeThemeEnabled, PropertyChanged.raise, false);
 
     private:
         struct winrt_object_hash
