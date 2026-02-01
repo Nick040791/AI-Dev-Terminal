@@ -75,12 +75,8 @@ namespace winrt::TerminalApp::implementation
                     // Toss focus onto the selected item in menu mode.
                     // Don't just focus the _filteredActionsView, because that will always select the 0th element.
 
-                    _searchBox().Visibility(Visibility::Collapsed);
-
-                    if (const auto& dependencyObj = SelectedItem().try_as<winrt::Windows::UI::Xaml::DependencyObject>())
-                    {
-                        Input::FocusManager::TryFocusAsync(dependencyObj, FocusState::Programmatic);
-                    }
+                    _searchBox().Visibility(Visibility::Visible);
+                    _searchBox().Focus(FocusState::Programmatic);
                 }
 
                 TraceLoggingWrite(
@@ -127,8 +123,10 @@ namespace winrt::TerminalApp::implementation
         }
         else if (_mode == SuggestionsMode::Menu)
         {
-            _searchBox().Visibility(Visibility::Collapsed);
-            _filteredActionsView().Focus(FocusState::Programmatic);
+            // In Menu mode, we still want the search box to be visible and focused
+            // so that the user can type to filter the menu.
+            _searchBox().Visibility(Visibility::Visible);
+            _searchBox().Focus(FocusState::Programmatic);
         }
     }
 
@@ -448,12 +446,12 @@ namespace winrt::TerminalApp::implementation
         }
 
         // If the user types a character while the menu (not in palette mode)
-        // is open, then dismiss ourselves. That way, when you type a character,
-        // we'll instead send it to the TermControl.
-        if (_mode == SuggestionsMode::Menu && !e.Handled())
-        {
-            _dismissPalette();
-        }
+        // is open, we used to dismiss ourselves.
+        // Now, we want to allow the user to filter the menu even in Menu mode.
+        // if (_mode == SuggestionsMode::Menu && !e.Handled())
+        // {
+        //    _dismissPalette();
+        // }
     }
 
     // Method Description:
