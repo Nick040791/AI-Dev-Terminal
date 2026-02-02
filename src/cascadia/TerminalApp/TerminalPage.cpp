@@ -1607,9 +1607,8 @@ namespace winrt::TerminalApp::implementation
             controlSettings = Settings::TerminalSettings::CreateWithProfile(_settings, profile);
 
             // Replace the Starting directory with the CWD, if given
-            const auto workingDirectory = control.WorkingDirectory();
-            const auto validWorkingDirectory = !workingDirectory.empty();
-            if (validWorkingDirectory)
+            const winrt::hstring workingDirectory{ control.WorkingDirectory() };
+            if (!workingDirectory.empty())
             {
                 controlSettings.DefaultSettings()->StartingDirectory(workingDirectory);
             }
@@ -3565,9 +3564,8 @@ namespace winrt::TerminalApp::implementation
                 // TODO GH#5047 If we cache the NewTerminalArgs, we no longer need to do this.
                 profile = GetClosestProfileForDuplicationOfProfile(profile);
                 controlSettings = Settings::TerminalSettings::CreateWithProfile(_settings, profile);
-                const auto workingDirectory = tabImpl->GetActiveTerminalControl().WorkingDirectory();
-                const auto validWorkingDirectory = !workingDirectory.empty();
-                if (validWorkingDirectory)
+                const winrt::hstring workingDirectory{ tabImpl->GetActiveTerminalControl().WorkingDirectory() };
+                if (!workingDirectory.empty())
                 {
                     controlSettings.DefaultSettings()->StartingDirectory(workingDirectory);
                 }
@@ -5503,9 +5501,16 @@ namespace winrt::TerminalApp::implementation
             // Start in the current window's effective working directory.
             // This matches the path the user is currently "in" for this window.
             winrt::hstring cwd;
+
+            // Prefer the cached CWD from when the slash menu was opened.
+            // The command execute sender may not be the originating TermControl.
+            cwd = _slashMenuOriginCwd;
             if (const auto control = sender.try_as<Microsoft::Terminal::Control::TermControl>())
             {
-                cwd = control.WorkingDirectory();
+                if (cwd.empty())
+                {
+                    cwd = control.WorkingDirectory();
+                }
             }
             if (cwd.empty())
             {

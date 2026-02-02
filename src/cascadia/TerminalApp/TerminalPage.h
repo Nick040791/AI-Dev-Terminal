@@ -552,6 +552,8 @@ namespace winrt::TerminalApp::implementation
         void _OpenAgentsSubmenu(const IInspectable sender);
         void _LaunchAgentCommand(const IInspectable sender, const winrt::hstring agentName);
 
+        winrt::hstring _slashMenuOriginCwd{};
+
         static Windows::Foundation::IAsyncOperation<Windows::Foundation::Collections::IVectorView<winrt::Microsoft::Management::Deployment::MatchResult>> _FindPackageAsync(hstring query);
 
         void _WindowSizeChanged(const IInspectable sender, const winrt::Microsoft::Terminal::Control::WindowSizeChangedEventArgs args);

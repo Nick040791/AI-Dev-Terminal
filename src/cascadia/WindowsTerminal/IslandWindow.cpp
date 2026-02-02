@@ -104,7 +104,15 @@ void IslandWindow::Close()
         // will leak all of its contents permanently.
         _source.Content(nullptr);
 
-        _source.Close();
+        try
+        {
+            _source.Close();
+        }
+        catch (...)
+        {
+            // Best effort. During suspend/termination, closing the desktop island can fail or hang.
+            // We already detached the content, so allow shutdown to proceed.
+        }
         _source = nullptr;
     }
 }

@@ -102,7 +102,8 @@ namespace winrt::TerminalApp::implementation
 
         args.Profile(::Microsoft::Console::Utils::GuidToString(_profile.Guid()));
         // If we know the user's working directory use it instead of the profile.
-        if (const auto dir = _control.WorkingDirectory(); !dir.empty())
+        const auto dir = _control.WorkingDirectory();
+        if (!dir.empty())
         {
             args.StartingDirectory(dir);
         }

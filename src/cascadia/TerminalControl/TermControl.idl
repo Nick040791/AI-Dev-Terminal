@@ -116,7 +116,6 @@ namespace Microsoft.Terminal.Control
         void RestoreFromPath(String path);
         void PersistTo(Int64 handle);
         void OpenCWD();
-        String WorkingDirectory();
         void Close();
         Windows.Foundation.Size CharacterDimensions { get; };
         Windows.Foundation.Size MinimumSize { get; };
